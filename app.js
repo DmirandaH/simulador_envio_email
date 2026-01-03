@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
+    const formulario = document.querySelector('#formulario');
     
     // Asignar eventos
     // el evento blur se ejecuta al abandonar un campo a otro del formulario.
@@ -29,8 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function mostrarAlerta() {
       const error = document.createElement('p');
       error.textContent = "Hubo un error.....";
+      error.classList.add ('bg-red-600',  'text-center',  'text-white',  'p-2');
 
-      console.log(error);
+    // Inyectar el error al formulario
+     formulario.appendChild(error);
+
+      
     }
         
+   
     });
