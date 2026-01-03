@@ -15,6 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function validar (evento) {
-        console.log(evento.target.value);
+        if (evento.target.value.trim() === '') {
+          mostrarAlerta();
+
+        } else {
+            console.log('si hay algo');
         }
+
+    
+
+    }
+
+    function mostrarAlerta() {
+      const error = document.createElement('p');
+      error.textContent = "Hubo un error.....";
+
+      console.log(error);
+    }
+        
     });
